@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+  loadClickCount();
+
   const buttonClick = document.getElementById("alertButton");
   const buttonSecret = document.getElementById("secretButton");
 
   buttonClick.addEventListener("click", function (event) {
-    alert("Hello, World!");
+    let clicks = localStorage.getItem("clicks");
+    clicks = clicks ? parseInt(clicks) + 1 : 1;
+    document.getElementById("clickCount").innerText = clicks;
+    localStorage.setItem("clicks", clicks);
   });
 
   buttonSecret.addEventListener("click", function (event) {
@@ -16,3 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function loadClickCount() {
+  let clicks = localStorage.getItem("clicks");
+  clicks = clicks ? parseInt(clicks) : 0;
+  document.getElementById("clickCount").innerText = clicks;
+}
