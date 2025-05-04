@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadClickCount();
 
   const buttonClick = document.getElementById("alertButton");
+  const buttonReset = document.getElementById("cleanButton");
   const buttonSecret = document.getElementById("secretButton");
 
   buttonClick.addEventListener("click", function (event) {
@@ -9,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     clicks = clicks ? parseInt(clicks) + 1 : 1;
     document.getElementById("clickCount").innerText = clicks;
     localStorage.setItem("clicks", clicks);
+  });
+
+  buttonReset.addEventListener("click", function (event) {
+    resetClickCount();
   });
 
   buttonSecret.addEventListener("click", function (event) {
@@ -26,4 +31,9 @@ function loadClickCount() {
   let clicks = localStorage.getItem("clicks");
   clicks = clicks ? parseInt(clicks) : 0;
   document.getElementById("clickCount").innerText = clicks;
+}
+
+function resetClickCount() {
+  localStorage.removeItem("clicks");
+  document.getElementById("clickCount").innerText = 0;
 }
