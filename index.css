@@ -14,3 +14,28 @@ button {
 .secondary {
   background-color: rgba(70, 70, 197, 0.863);
 }
+
+.error {
+  background-color: rgb(255, 0, 0);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  cursor: not-allowed;
+}
