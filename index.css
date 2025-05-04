@@ -30,3 +30,12 @@ button:active {
 button:focus {
   outline: none;
 }
+
+button:disabled {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  cursor: not-allowed;
+}
