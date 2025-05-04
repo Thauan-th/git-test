@@ -12,25 +12,24 @@
 </head>
 
 <body>
+  <div class="container">
+    <button type="button" id="alertButton" class="success">
+      Click to alert
+    </button>
 
-  <button type="button" id="alertButton" class="success">
-    Click to alert
-  </button>
-
-  <button type="button" id="secretButton">
-    Click To Show Secret
-  </button>
+    <button type="button" id="secretButton">
+      Click To Show Secret
+    </button>
 
 
-  <div id="secret" style="display: none;">
-    <p>This is a secret message!</p>
+    <div id="secret" style="display: none;">
+      <p>This is a secret message!</p>
+    </div>
+
+    <div id="clicks">
+      <p>Click count: <span id="clickCount">0</span></p>
+    </div>
   </div>
-
-  <div id="clicks">
-    <p>Click count: <span id="clickCount">0</span></p>
-  </div>
-
-
 </body>
 
 </html>
