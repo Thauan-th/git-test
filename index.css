@@ -14,3 +14,7 @@ button {
 .secondary {
   background-color: rgba(70, 70, 197, 0.863);
 }
+
+.error {
+  background-color: rgb(255, 0, 0);
+}
