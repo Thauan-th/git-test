@@ -27,3 +27,6 @@ function loadClickCount() {
   clicks = clicks ? parseInt(clicks) : 0;
   document.getElementById("clickCount").innerText = clicks;
 }
+
+// add novo comment
+// new commit
